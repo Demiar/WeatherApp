@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		8A6742E02685CF490063C68C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742DF2685CF490063C68C /* AppDelegate.swift */; };
 		8A6742E22685CF490063C68C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742E12685CF490063C68C /* SceneDelegate.swift */; };
-		8A6742E42685CF490063C68C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742E32685CF490063C68C /* ViewController.swift */; };
+		8A6742E42685CF490063C68C /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742E32685CF490063C68C /* WeatherTableViewController.swift */; };
 		8A6742E72685CF490063C68C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6742E52685CF490063C68C /* Main.storyboard */; };
 		8A6742E92685CF4C0063C68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6742E82685CF4C0063C68C /* Assets.xcassets */; };
 		8A6742EC2685CF4C0063C68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6742EA2685CF4C0063C68C /* LaunchScreen.storyboard */; };
+		8A6742F42685CF800063C68C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742F32685CF800063C68C /* DataManager.swift */; };
+		8A6742F62685CFAF0063C68C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742F52685CFAF0063C68C /* Weather.swift */; };
+		8A6742FA268665310063C68C /* DetailWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742F9268665310063C68C /* DetailWeatherViewController.swift */; };
+		8A67430226872D760063C68C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A67430126872D760063C68C /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A6742DC2685CF490063C68C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6742DF2685CF490063C68C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A6742E12685CF490063C68C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A6742E32685CF490063C68C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A6742E32685CF490063C68C /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
 		8A6742E62685CF490063C68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A6742E82685CF4C0063C68C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A6742EB2685CF4C0063C68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A6742ED2685CF4C0063C68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6742F32685CF800063C68C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8A6742F52685CFAF0063C68C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		8A6742F9268665310063C68C /* DetailWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherViewController.swift; sourceTree = "<group>"; };
+		8A67430126872D760063C68C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		8A6742DE2685CF490063C68C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				8A6742DF2685CF490063C68C /* AppDelegate.swift */,
-				8A6742E12685CF490063C68C /* SceneDelegate.swift */,
-				8A6742E32685CF490063C68C /* ViewController.swift */,
-				8A6742E52685CF490063C68C /* Main.storyboard */,
-				8A6742E82685CF4C0063C68C /* Assets.xcassets */,
-				8A6742EA2685CF4C0063C68C /* LaunchScreen.storyboard */,
+				8A67430026872D5B0063C68C /* Extensions */,
+				8A6742FF26872CA00063C68C /* Resources */,
+				8A6742FE26872C8A0063C68C /* Storyboards */,
+				8A6742FD26872C7C0063C68C /* Data */,
+				8A6742FC26872C660063C68C /* ViewControllers */,
+				8A6742FB26872C5C0063C68C /* Models */,
 				8A6742ED2685CF4C0063C68C /* Info.plist */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		8A6742FB26872C5C0063C68C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A6742F52685CFAF0063C68C /* Weather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A6742FC26872C660063C68C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A6742E32685CF490063C68C /* WeatherTableViewController.swift */,
+				8A6742F9268665310063C68C /* DetailWeatherViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A6742FD26872C7C0063C68C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8A6742F32685CF800063C68C /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8A6742FE26872C8A0063C68C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8A6742E52685CF490063C68C /* Main.storyboard */,
+				8A6742EA2685CF4C0063C68C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8A6742FF26872CA00063C68C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A6742DF2685CF490063C68C /* AppDelegate.swift */,
+				8A6742E12685CF490063C68C /* SceneDelegate.swift */,
+				8A6742E82685CF4C0063C68C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A67430026872D5B0063C68C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A67430126872D760063C68C /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A6742E42685CF490063C68C /* ViewController.swift in Sources */,
+				8A6742E42685CF490063C68C /* WeatherTableViewController.swift in Sources */,
+				8A6742F42685CF800063C68C /* DataManager.swift in Sources */,
 				8A6742E02685CF490063C68C /* AppDelegate.swift in Sources */,
 				8A6742E22685CF490063C68C /* SceneDelegate.swift in Sources */,
+				8A67430226872D760063C68C /* String.swift in Sources */,
+				8A6742F62685CFAF0063C68C /* Weather.swift in Sources */,
+				8A6742FA268665310063C68C /* DetailWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A5GSXMSS8;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.WeatherApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A5GSXMSS8;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.WeatherApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
