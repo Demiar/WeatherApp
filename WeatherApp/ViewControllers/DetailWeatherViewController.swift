@@ -80,6 +80,8 @@ class DetailWeatherViewController: UIViewController {
             return "cloud"
         case "Wind":
             return "wind"
+        case "Haze":
+            return "cloud"
         default:
             return "sun"
         }
