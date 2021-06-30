@@ -15,7 +15,6 @@ class WeatherTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        //data = dataManager.getDefaultWeather()
         citys = dataManager.defaultCity
         tableView.allowsSelection = true
         tableView.backgroundView?.backgroundColor = UIColor(red: 117, green: 204, blue: 205, alpha: 1)

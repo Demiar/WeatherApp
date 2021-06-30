@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import Alamofire
 
 class DataManager {
 
+    static let shared = DataManager()
     let units = "metric"
     let lang = "ru"
     let defaultCity = ["Москва", "Лондон", "Омск"]
@@ -18,6 +20,18 @@ class DataManager {
     
     var getUrl: String {
         "\(url)appid=\(apiKey)&units=\(units)&lang=\(lang)"
+    }
+    
+    func getWeather(city: String, _ completion: @escaping (WeatherData) -> Void) {
+        AF.request("\(self.getUrl)&q=\(city)".encodeUrl).responseDecodable(of: WeatherData.self) { response in
+            switch response.result {
+            case .success:
+                print(response.result)
+                guard let weatherData = response.value else { return }
+                completion(weatherData)
+            case let .failure(error): print(error)
+            }
+        }
     }
 }
 
