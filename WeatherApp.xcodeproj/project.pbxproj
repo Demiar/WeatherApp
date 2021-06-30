@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		8A6742F62685CFAF0063C68C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742F52685CFAF0063C68C /* Weather.swift */; };
 		8A6742FA268665310063C68C /* DetailWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6742F9268665310063C68C /* DetailWeatherViewController.swift */; };
 		8A67430226872D760063C68C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A67430126872D760063C68C /* String.swift */; };
+		8A91D785268CA1C0001946FD /* WeatherApp.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 8A91D784268CA1C0001946FD /* WeatherApp.xcworkspace */; };
+		8A91D787268CB215001946FD /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91D786268CB215001946FD /* Icons.swift */; };
 		C13281568535B2C3BCEE9D4A /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E2D806FE64ED2B0EA6DACC /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		8A6742F52685CFAF0063C68C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		8A6742F9268665310063C68C /* DetailWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherViewController.swift; sourceTree = "<group>"; };
 		8A67430126872D760063C68C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8A91D784268CA1C0001946FD /* WeatherApp.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = WeatherApp.xcworkspace; sourceTree = "<group>"; };
+		8A91D786268CB215001946FD /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		93E2D806FE64ED2B0EA6DACC /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28FEDC1509FBD0FBD575686 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +57,7 @@
 		2AFDAB91F67B812E50F07056 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A91D784268CA1C0001946FD /* WeatherApp.xcworkspace */,
 				93E2D806FE64ED2B0EA6DACC /* Pods_WeatherApp.framework */,
 			);
 			name = Frameworks;
@@ -64,7 +69,6 @@
 				5828D48D3E337A16A4DC582B /* Pods-WeatherApp.debug.xcconfig */,
 				F28FEDC1509FBD0FBD575686 /* Pods-WeatherApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6742F32685CF800063C68C /* DataManager.swift */,
+				8A91D786268CB215001946FD /* Icons.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				8A6742EC2685CF4C0063C68C /* LaunchScreen.storyboard in Resources */,
 				8A6742E92685CF4C0063C68C /* Assets.xcassets in Resources */,
 				8A6742E72685CF490063C68C /* Main.storyboard in Resources */,
+				8A91D785268CA1C0001946FD /* WeatherApp.xcworkspace in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +274,7 @@
 			files = (
 				8A6742E42685CF490063C68C /* WeatherTableViewController.swift in Sources */,
 				8A6742F42685CF800063C68C /* DataManager.swift in Sources */,
+				8A91D787268CB215001946FD /* Icons.swift in Sources */,
 				8A6742E02685CF490063C68C /* AppDelegate.swift in Sources */,
 				8A6742E22685CF490063C68C /* SceneDelegate.swift in Sources */,
 				8A67430226872D760063C68C /* String.swift in Sources */,
@@ -349,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -404,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
