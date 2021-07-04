@@ -14,17 +14,6 @@ struct Weather: Codable {
     let icon: String
 }
 
-struct Temperature: Codable {
-    let temp: Double
-    let feels_like: Double
-    let temp_max: Double
-    let temp_min: Double
-}
 
-struct WeatherData: Codable {
-    let id: Int?
-    let name: String?
-    let message: String?
-    let weather: [Weather]?
-    let main: Temperature?
-}
+
+

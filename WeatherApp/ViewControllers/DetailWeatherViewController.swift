@@ -10,6 +10,7 @@ import UIKit
 class DetailWeatherViewController: UIViewController {
     var city = ""
     var temperature = ""
+    var weatherData: WeatherData?
     
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -19,8 +20,7 @@ class DetailWeatherViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
-        loadData()
+        //loadData()
         cityLabel.text = city
         temperatureLabel.text = temperature
         cityLabel.isHidden = true
@@ -28,6 +28,19 @@ class DetailWeatherViewController: UIViewController {
         iconImage.isHidden = true
         descriptionLabel.isHidden = true
         activityIndicator.startAnimating()
+        if let weatherData = weatherData {
+            guard let weather = weatherData.weather else { return }
+            guard let main = weatherData.main else { return }
+            iconImage.image = UIImage(named: DataManager.shared.getIcon(icon: weather[0].main))
+                descriptionLabel.text = weather[0].description
+                temperatureLabel.text = "\(Int(main.temp))\(UnitTemperature.celsius.symbol)"
+                activityIndicator.stopAnimating()
+                activityIndicator.isHidden = true
+                cityLabel.isHidden = false
+                temperatureLabel.isHidden = false
+                iconImage.isHidden = false
+                descriptionLabel.isHidden = false
+        }
     }
     
     private func loadData() {
@@ -42,8 +55,7 @@ class DetailWeatherViewController: UIViewController {
                     }
                     guard let weather = weatherData.weather else { return }
                     guard let main = weatherData.main else { return }
-                        iconImage.image = UIImage(named: getIcon(icon: weather[0].main))
-                        print(weather[0].main)
+                    iconImage.image = UIImage(named: DataManager.shared.getIcon(icon: weather[0].main))
                         descriptionLabel.text = weather[0].description
                         temperatureLabel.text = "\(Int(main.temp))\(UnitTemperature.celsius.symbol)"
                         activityIndicator.stopAnimating()
@@ -55,22 +67,6 @@ class DetailWeatherViewController: UIViewController {
                 }
             })
     }
-    
-    private func getIcon(icon: String) -> String{
-        switch icon {
-        case "Rain":
-            return "rain"
-        case "Snow":
-            return "snow"
-        case "Clouds":
-            return "cloud"
-        case "Wind":
-            return "wind"
-        case "Haze":
-            return "cloud"
-        default:
-            return "sun"
-        }
-    }
+
 }
 
