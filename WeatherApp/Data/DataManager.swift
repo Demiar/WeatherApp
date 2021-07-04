@@ -11,18 +11,19 @@ import Alamofire
 class DataManager {
 
     static let shared = DataManager()
+
+    var cities: [String] = []
+    var getUrl: String {
+        "\(openWeatherMap.url)appid=\(openWeatherMap.apiKey)&units=\(openWeatherMap.units)&lang=\(openWeatherMap.lang)"
+    }
+    
+    private let userDefaults = UserDefaults.standard
+    private let arrayKey = "cities"
     private let openWeatherMap = OpenWeatherMap(url: "https://api.openweathermap.org/data/2.5/weather?",
                                         units: "metric",
                                         lang: "ru",
                                         apiKey: "d4ef3717f7e55926d379e7a205329917"
     )
-    var cities: [String] = []
-    let userDefaults = UserDefaults.standard
-    let arrayKey = "cities"
-    
-    var getUrl: String {
-        "\(openWeatherMap.url)appid=\(openWeatherMap.apiKey)&units=\(openWeatherMap.units)&lang=\(openWeatherMap.lang)"
-    }
     
     init() {
         if userDefaults.array(forKey: arrayKey) == nil {
