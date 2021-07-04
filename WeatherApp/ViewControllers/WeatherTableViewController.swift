@@ -33,7 +33,7 @@ class WeatherTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomTableViewCell
         if DataManager.shared.weatherDataArray.isEmpty { return cell! }
-        cell?.cityLabel.text = DataManager.shared.dataArray[indexPath.row].values.first?.name
+        cell?.cityLabel.text = DataManager.shared.cities[indexPath.row]
         DataManager.shared.getWeather(city: DataManager.shared.cities[indexPath.row], {weatherData in
             DispatchQueue.main.async {
                 DataManager.shared.weatherDataArray.append(weatherData)
